@@ -27,7 +27,7 @@ run_multi_sim_per_param <- function(param_string, num_times, num_cores, file_nam
 args <- commandArgs(trailingOnly = TRUE)
 param_string <- args[1]
 safe_param_string <- gsub("[^a-zA-Z0-9]", "_", param_string)
-base_dir_path <- "/storage/home/mms7976/work/roartemplate/"
+base_dir_path <- "./"
 res_dir_name <- "res_moo"
 result_dir_path <- paste0(base_dir_path, res_dir_name, "/")
 dir.create(result_dir_path,recursive=TRUE,showWarnings=TRUE)

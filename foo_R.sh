@@ -3,7 +3,7 @@
 # Ensure the file is executable: chmod +x foo_R.sh
 
 # specify the directory where the job's logs should be stored. If the directory doesn't exist, it would create one
-output_dir="/storage/home/mms7976/work/roartemplate/job_logs_foo"
+output_dir="./job_logs_foo"
 mkdir -p "$output_dir"
 
 # Iterate through each line in params_foo.txt file. Each line in that file represents one combination/set of parameters you want to run the experiment for
@@ -26,7 +26,6 @@ do
 
 module load r                                                 # Load R module, adjust if using a specific version
 
-cd "/storage/home/mms7976/work/roartemplate/"                 # Directory where the code is stored
 Rscript foo.R "$line"                                         # Run the R script with parameters
 EOT
 

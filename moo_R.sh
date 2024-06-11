@@ -2,7 +2,7 @@
 
 # Ensure the file is executable: chmod +x this_script.sh
 
-output_dir="/storage/home/mms7976/work/roartemplate/job_logs_moo"
+output_dir="./job_logs_moo"
 mkdir -p "$output_dir"
 
 # Iterate through each line in params.txt
@@ -25,7 +25,6 @@ do
 
 module load r                       # Load R module, adjust if using a specific version
 
-cd "/storage/home/mms7976/work/roartemplate/"
 Rscript moo.R "$line"                 # Run the R script with parameters
 EOT
 
