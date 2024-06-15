@@ -23,5 +23,32 @@ Before using this template, ensure you have:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourlab/roar-hpc-template.git
+   git clone https://github.com/manansaxena/roar-hpc-template.git
    cd roar-hpc-template
+   ```
+2. **Make Scripts Executable**:
+   ```bash
+   chmod +x *.sh
+   ```
+
+## Usage
+
+1. **Prepare your scripts**:
+   Use 'foo_R.sh' and 'foo.R' as templates and make the necessary changes using the comments in the file. Create as many pair of similar files to run multiple stages in the project.
+2. **Make changes to master_driver.sh**:
+   Each stage in the project is assigned a script file to be executed and each stage is executed after the previous one has been completed successfully.
+3. **Create parameters file**:
+   Use 'generate_params.R' file to create params.txt which would contain all the combinations you want to run your experiment for. Each stage of the project can have a dedicated parameter file.
+ 
+## Execute
+After all the changes have been made, just run the following command from your terminal(already connected to Roar):
+
+```bash
+sbatch master_driver.sh
+```
+
+You can check the status of jobs using the following command
+
+```bash
+squeue -u {your_roar_id}
+```
