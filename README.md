@@ -23,7 +23,7 @@ Before using this template, ensure you have:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/manansaxena/roar-hpc-template.git
+   git clone https://github.com/manansaxena/project-template.git
    cd roar-hpc-template
    ```
 2. **Make Scripts Executable**:
